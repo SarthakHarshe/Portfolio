@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --paper: #FDFBF7;
+  --ink: #0A0908;
+  --beige: #C9B79C;
+  --beige-light: #E4D5C7;
+  --beige-dark: #A89580;
+  --warm-grey: #D4CFC4;
+  --light-grey: #F0EDE8;
+  --sage: #8B9D83;
+
+  /* Layout */
+  --column-count: 12;
+  --gutter: 24px;
+  --margin: 80px;
+
+  /* Typography */
+  --font-inter: "Inter", sans-serif;
+  --font-crimson: "Crimson Text", serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+
+  /* Animations */
+  --ease-out-expo: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (max-width: 1024px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --margin: 40px;
+    --column-count: 8;
   }
 }
 
+@media (max-width: 768px) {
+  :root {
+    --margin: 20px;
+    --column-count: 4;
+  }
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jetbrains);
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--beige);
+  color: var(--paper);
+  mix-blend-mode: difference;
 }
