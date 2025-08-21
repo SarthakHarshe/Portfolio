@@ -1,0 +1,60 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px var(--margin);
+  z-index: 1000;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(253, 251, 247, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: var(--ink);
+}
+
+.logoText {
+  font-family: var(--font-jetbrains);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.navItem {
+  position: relative;
+  font-family: var(--font-inter);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.navItem::before {
+  content: attr(data-index);
+  position: absolute;
+  left: -24px;
+  top: 0;
+  opacity: 0.4;
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+}
+
+

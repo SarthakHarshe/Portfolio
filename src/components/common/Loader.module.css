@@ -1,0 +1,28 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+}
+
+.loaderContent {
+  text-align: center;
+}
+
+.loaderNumber {
+  font-family: var(--font-jetbrains);
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.loaderText {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: rgba(10, 9, 8, 0.7);
+}
+
+

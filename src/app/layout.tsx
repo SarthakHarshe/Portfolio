@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Crimson_Text, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/layout/Navigation";
+import CustomCursor from "@/components/layout/CustomCursor";
+import Loader from "@/components/common/Loader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,7 +47,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${crimsonText.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Loader />
+        <CustomCursor />
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
