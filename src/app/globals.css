@@ -2,14 +2,14 @@
 
 :root {
   /* Colors */
-  --paper: #FDFBF7;
-  --ink: #0A0908;
-  --beige: #C9B79C;
-  --beige-light: #E4D5C7;
-  --beige-dark: #A89580;
-  --warm-grey: #D4CFC4;
-  --light-grey: #F0EDE8;
-  --sage: #8B9D83;
+  --paper: #fdfbf7;
+  --ink: #0a0908;
+  --beige: #c9b79c;
+  --beige-light: #e4d5c7;
+  --beige-dark: #a89580;
+  --warm-grey: #d4cfc4;
+  --light-grey: #f0ede8;
+  --sage: #8b9d83;
 
   /* Layout */
   --column-count: 12;
