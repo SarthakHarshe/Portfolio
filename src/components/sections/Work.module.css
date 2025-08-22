@@ -1,0 +1,44 @@
+.workSection {
+  padding: var(--margin);
+}
+
+.workHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.workTitle {
+  font-family: var(--font-crimson);
+  font-size: 48px;
+}
+
+.workSubtitle {
+  font-family: var(--font-inter);
+  color: rgba(10, 9, 8, 0.7);
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.projectGrid > article {
+  grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+  .projectGrid > article {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectGrid > article {
+    grid-column: span 12;
+  }
+}
+
+
