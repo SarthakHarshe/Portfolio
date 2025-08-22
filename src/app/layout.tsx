@@ -4,6 +4,8 @@ import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import CustomCursor from "@/components/layout/CustomCursor";
 import Loader from "@/components/common/Loader";
+import GridSystem from "@/components/common/GridSystem";
+import SmoothScroll from "@/components/common/SmoothScroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,8 +50,10 @@ export default function RootLayout({
       className={`${inter.variable} ${crimsonText.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <SmoothScroll />
         <Loader />
         <CustomCursor />
+        <GridSystem />
         <Navigation />
         {children}
       </body>
