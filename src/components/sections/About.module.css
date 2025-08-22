@@ -1,0 +1,46 @@
+.aboutSection {
+  padding: var(--margin);
+}
+
+.aboutHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.aboutTitle {
+  font-family: var(--font-crimson);
+  font-size: 48px;
+}
+
+.aboutSubtitle {
+  font-family: var(--font-inter);
+  color: rgba(10, 9, 8, 0.7);
+}
+
+.aboutBody {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.aboutIntro {
+  grid-column: span 6;
+  font-family: var(--font-inter);
+  font-size: 18px;
+}
+
+.skillsGrid {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .aboutIntro { grid-column: span 12; }
+  .skillsGrid { grid-column: span 12; grid-template-columns: 1fr; }
+}
+
+

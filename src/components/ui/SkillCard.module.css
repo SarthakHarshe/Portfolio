@@ -1,0 +1,20 @@
+.skillCard {
+  border: 1px solid rgba(10, 9, 8, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--paper);
+}
+
+.skillName {
+  font-family: var(--font-crimson);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.skillDescription {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
