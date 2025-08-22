@@ -49,8 +49,10 @@
 
 .infiniteGrid {
   display: grid;
-  grid-template-columns: repeat(10, minmax(180px, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
   gap: 16px;
+  animation: marquee 40s linear infinite;
 }
 
 .photoColumn {
@@ -64,18 +66,57 @@
   padding: 16px;
   border-radius: 12px;
   background: var(--paper);
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
 }
 
-.small { height: 140px; }
-.medium { height: 200px; }
-.large { height: 260px; }
-.tall { height: 300px; }
-.wide { height: 180px; }
+.small {
+  height: 140px;
+}
+.medium {
+  height: 200px;
+}
+.large {
+  height: 260px;
+}
+.tall {
+  height: 300px;
+}
+.wide {
+  height: 180px;
+}
 
-.photoContent { height: 100%; position: relative; }
-.photoOverlay { position: absolute; left: 16px; bottom: 16px; }
-.photoTitle { font-family: var(--font-crimson); font-size: 20px; }
-.photoMeta { font-family: var(--font-inter); font-size: 12px; opacity: 0.7; }
-.photoNumber { position: absolute; top: 8px; right: 12px; font-family: var(--font-jetbrains); font-size: 12px; opacity: 0.5; }
+.photoContent {
+  height: 100%;
+  position: relative;
+}
+.photoOverlay {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+.photoTitle {
+  font-family: var(--font-crimson);
+  font-size: 20px;
+}
+.photoMeta {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  opacity: 0.7;
+}
+.photoNumber {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+  opacity: 0.5;
+}
 
-
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

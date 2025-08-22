@@ -24,15 +24,27 @@
   height: 200%;
   top: -50%;
   left: -50%;
-  background:
-    radial-gradient(circle at 30% 50%, rgba(201, 183, 156, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 70% 80%, rgba(139, 157, 131, 0.03) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 30% 50%,
+      rgba(201, 183, 156, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(139, 157, 131, 0.03) 0%,
+      transparent 50%
+    );
   animation: gradientShift 20s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
-  0%, 100% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(1.1); }
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
 }
 
 .heroTitle {
@@ -43,4 +55,42 @@
   margin-bottom: 60px;
 }
 
+/* Title line reveal setup */
+.title-line {
+  display: block;
+  overflow: hidden;
+  perspective: 800px;
+}
 
+.title-line span {
+  display: inline-block;
+  transform: translateY(100%) rotateX(60deg);
+  transform-origin: 50% 100%;
+}
+
+.heroContent .hero-subtitle {
+  font-family: var(--font-inter);
+  font-size: clamp(14px, 2vw, 18px);
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: center;
+}
+
+/* Floating decorative elements */
+.floatingElements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floatingElInner {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(201, 183, 156, 0.15) 0%,
+    rgba(201, 183, 156, 0.0) 70%
+  );
+  filter: blur(10px);
+}
